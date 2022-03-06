@@ -7,4 +7,6 @@ def home(request):
 
 def reverse(request):
     message = request.GET['message']
-    return render(request, 'reverse.html', {'original_message': message, 'reversed_message': message[::-1]})
+    return render(request, 'reverse.html', {'original_message': message,
+                                            'reversed_message': message[::-1],
+                                            'len': len(message.split())})
